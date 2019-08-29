@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+}
+
+.signinModal {
+    display: block; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+  .modalContent {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 400px;
+  }
+
+  @media screen and (max-width: 700px) {
+    .modalContent {
+        width: 200px;
+      }
+    }
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20vh 20vh 20vh 20vh 20vh;
+}
+
+.sidebar {
+    grid-column: 1 / 2;
+    grid-row: 1 / 6;
+    background: dodgerblue;
+    color: white;
+}
+
+.chatroom {
+    grid-column: 2 / 6;
+    grid-row: 1 / 6;
+    overflow-y: scroll;
+}
+
+.userChat {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-rows: 75px 50px;
+    background: white;
+    color: black;
+    padding: 10px;
+    word-wrap: break-word;
+    border: 1px solid slategray;
+}
+
+.userImg {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.userChatName {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.userChatTime {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.userChatMessage {
+    grid-column: 1 / 10;
+    grid-row: 2 / 3;
+}
+
+.userInputArea {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: white;
+    border: 1px solid black;
+}
+
+.userChatInp {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 95%;
+}
+
+.submitChat {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    padding: 10px;
+    background: dodgerblue;
+}

@@ -6,8 +6,12 @@
     <title>PracChat: Practical Chat</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='assets/style.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/9cc1485cba.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.4.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.4.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.4.2/firebase-database.js"></script>
+    <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -31,24 +35,31 @@
 
             <div class="chatArea" id="chatArea">
 
-                <div class="userChat">
-                    <a href="https://placeholder.com"><img src="https://via.placeholder.com/75"></a>
-                    <h4 class="userChatName">Brian Kohnen</h4>
-                    <p class="userChatTime">7:00PM</p>
-                    <p class="userChatMessage">Hey, just testing the formatting</p>
-                </div>
-
             </div>
 
             <div class="userInputArea" id="userInputArea">
+                <form>
                 <input class="userChatInp" id="userChatInp" placeholder="type here">
-                    <div class="submitChat" id="submitChat">submit</div>
+                    <button class="submitChat" id="submitChat">submit</div>
                 </input>
+                </form>
             </div>
 
         </div>
+
+        <div class="signinModal" id="signInModal">
+            <div class="modalContent">
+                <h1 id="modalHead">Log in or Sign up to continue</h1>
+                <ul id="logorsign">
+                    <li id="login">Log in</li>
+                    <li id="signup">Sign up</li>
+                </ul>
+                <div id="modalLogOrSign"></div>
+            </div>
+        </div>
     
     </div>
+
 
 <script src='app.js'></script>
 </body>
