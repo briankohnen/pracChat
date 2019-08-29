@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>PracChat: Practical Chat</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='assets/style.css'>
+    <script src="https://kit.fontawesome.com/9cc1485cba.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.4.2/firebase-app.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="sidebar">
+
+            <h2 class="sideHeader" id="sideHeader">PracChat</h2>
+            <h4 class="currUser" id="currUser"></h4>
+
+            <h2 class="sideChannels">Channels<span class="addChannel fas fa-plus-circle" id="addChannel"></span></h2>
+                <ul class="channelList" id="channelList">
+                </ul>
+
+            <h2 class="directMessages">Direct Messages<span class="addDM fas fa-plus-circle" id="addDM"></span></h2>
+                <ul class="channelList" id="DMList">
+                </ul>
+
+        </div>
+
+        <div class="chatroom">
+
+            <div class="chatArea" id="chatArea">
+
+                <div class="userChat">
+                    <a href="https://placeholder.com"><img src="https://via.placeholder.com/75"></a>
+                    <h4 class="userChatName">Brian Kohnen</h4>
+                    <p class="userChatTime">7:00PM</p>
+                    <p class="userChatMessage">Hey, just testing the formatting</p>
+                </div>
+
+            </div>
+
+            <div class="userInputArea" id="userInputArea">
+                <input class="userChatInp" id="userChatInp" placeholder="type here">
+                    <div class="submitChat" id="submitChat">submit</div>
+                </input>
+            </div>
+
+        </div>
+    
+    </div>
+
+<script src='app.js'></script>
+</body>
+</html>
