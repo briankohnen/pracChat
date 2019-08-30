@@ -16,13 +16,14 @@
 <body>
     <div class="wrapper">
 
-        <div class="sidebar">
+        <div class="sidebar" id="sidebar">
 
             <h2 class="sideHeader" id="sideHeader">PracChat</h2>
             <h4 class="currUser" id="currUser"></h4>
 
             <h2 class="sideChannels">Channels<span class="addChannel fas fa-plus-circle" id="addChannel"></span></h2>
                 <ul class="channelList" id="channelList">
+                    <li class="userChannels, litty" data="general">General</li>
                 </ul>
 
             <h2 class="directMessages">Direct Messages<span class="addDM fas fa-plus-circle" id="addDM"></span></h2>
@@ -39,24 +40,39 @@
 
             <div class="userInputArea" id="userInputArea">
                 <form>
-                <input class="userChatInp" id="userChatInp" placeholder="type here">
-                    <button class="submitChat" id="submitChat">submit</div>
+                <input class="userChatInp" id="userChatInp" placeholder="type here, hit enter to send">
+                    <button class="submitChat" id="submitChat">submit</button>
                 </input>
                 </form>
             </div>
 
         </div>
 
-        <div class="signinModal" id="signInModal">
+        <div class="issamodal" id="signInModal">
             <div class="modalContent">
+                <div class="modalHeadCont">
                 <h1 id="modalHead">Log in or Sign up to continue</h1>
+                </div>
                 <ul id="logorsign">
-                    <li id="login">Log in</li>
-                    <li id="signup">Sign up</li>
+                    <li class="litty" id="login">Log in</li>
+                    <li class="litty" id="signup">Sign up</li>
                 </ul>
                 <div id="modalLogOrSign"></div>
             </div>
         </div>
+
+        <div class="channelmodal" id="addchannelModal">
+            <div class="modalContent">
+                <div class="modalHeadCont">
+                <h1 id="modalHead">Add or join a channel</h1>
+                </div>
+                <form>
+                    <input id="channeljoin"><button id="channelsub">submit</button>
+                    </input>
+                </form>
+            </div>
+        </div>
+
     
     </div>
 

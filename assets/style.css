@@ -1,8 +1,10 @@
 body {
     margin: 0;
+    box-sizing: border-box;
+    font-family: 'candara', helvetica, sans-serif, arial;
 }
 
-.signinModal {
+.issamodal {
     display: block; 
     position: fixed; 
     z-index: 1; 
@@ -16,12 +18,23 @@ body {
     background-color: rgba(0,0,0,0.4); 
   }
   .modalContent {
-    background-color: #fefefe;
+    background-color: navy;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 400px;
+    border-radius: 1%;
+    box-shadow: 1px 1px 10px black;
   }
+
+.modalHeadCont {
+    
+    color: white;
+    padding: 10px 2px;
+    width: inherit;
+    position: relative;
+    margin-right: 10px;
+}
 
   @media screen and (max-width: 700px) {
     .modalContent {
@@ -40,11 +53,18 @@ body {
     grid-row: 1 / 6;
     background: dodgerblue;
     color: white;
+    box-shadow: inset 1px 1px 20px -7px black;
 }
 
 .chatroom {
     grid-column: 2 / 6;
     grid-row: 1 / 6;
+    display: grid;
+    grid-template-rows: 90% 10%;
+}
+
+.chatArea {
+    grid-row: 1 / 2;
     overflow-y: scroll;
 }
 
@@ -57,7 +77,7 @@ body {
     color: black;
     padding: 10px;
     word-wrap: break-word;
-    border: 1px solid slategray;
+    border-bottom: 1px solid slategray;
 }
 
 .userImg {
@@ -66,12 +86,12 @@ body {
 }
 
 .userChatName {
-    grid-column: 2 / 3;
+    grid-column: 2 / 4;
     grid-row: 1 / 2;
 }
 
 .userChatTime {
-    grid-column: 3 / 4;
+    grid-column: 4 / 5;
     grid-row: 1 / 2;
 }
 
@@ -81,27 +101,72 @@ body {
 }
 
 .userInputArea {
-    padding-top: 75px;
+    grid-row: 2 / 3;
     padding-bottom: 75px;
-    width: 80%;
+    width: 79.80%;
     position: absolute;
     bottom: 0;
     right: 0;
     background: white;
-    border: 1px solid black;
 }
 
 .userChatInp {
     position: absolute;
-    top: 0;
+    bottom: 25px;
     right: 0;
-    width: 95%;
+    width: 98.43%;
+    border: 1px solid gray;
+    padding: 10px;
 }
 
 .submitChat {
+    display: none;
     position: absolute;
-    top: 25px;
+    bottom: 15px;
     right: 0;
     padding: 10px;
     background: dodgerblue;
 }
+
+.userChat:hover {
+    box-shadow: inset 1px 1px 10px lightgrey;
+}
+
+ul {
+    list-style-type: none
+}
+
+.litty {
+    padding: 5px;
+    background: dodgerblue;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.litty:hover {
+    box-shadow: inset -1px -1px 5px white;
+}
+
+.channelmodal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+
+  .fas {
+      cursor: pointer;
+      margin-left: 10px;
+  }
+  .fas:hover {
+      color: lightgrey;
+  }
